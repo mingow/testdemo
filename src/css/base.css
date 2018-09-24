@@ -1,0 +1,44 @@
+@import './antd.css';
+
+html,body,.fullHeight {
+  height:100%
+}
+
+body {
+  height:100%
+}
+
+.ant-carousel .slick-slide {
+  overflow: hidden;
+  margin:0 auto;
+  object-fit: cover;
+}
+
+img {
+  object-fit: cover;
+  margin:0 auto;
+}
+
+.defaultHeader {
+  position:fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(255,255,255,0.4);
+}
+
+.defaultHeader>ul{
+  text-decoration: none;
+  display: flex;
+  margin:10px 0;
+  justify-content: space-around;
+}
+
+.defaultHeader ul li{
+  list-style: none;
+  margin:0 auto;
+  text-align: center;
+}
+
+.defaultHeader a {
+  color:#333;
+}
