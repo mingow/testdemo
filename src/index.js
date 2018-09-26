@@ -12,8 +12,8 @@ class App extends React.Component {
     var height = 768;
     var clientW = document.documentElement.clientWidth;
     var calcHeight = clientW/4*3;
-    height=height>calcHeight?calcHeight:height;
-    document.styleSheets[0].addRule('.carouselDefault', 'height:'+(document.documentElement.clientHeight-64)+'px');
+    height=height>document.documentElement.clientHeight-64?document.documentElement.clientHeight-64:height;
+    document.styleSheets[0].addRule('.carouselDefault', 'height:'+height+'px');
     document.styleSheets[0].addRule('.carouselDefault', 'width:'+(document.documentElement.clientWidth)+'px');
   }
 

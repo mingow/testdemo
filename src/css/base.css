@@ -42,3 +42,7 @@ img {
 .defaultHeader a {
   color:#333;
 }
+
+.carouselDefault {
+  overflow: hidden;
+}
