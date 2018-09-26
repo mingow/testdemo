@@ -24,9 +24,9 @@ export default class MainFrame extends React.Component {
       <Layout>
       <div className="defaultHeader" >
         <ul>
-          <li><a><ul><li><Icon type="hdd" style={{fontSize: '32px'}} /></li><li>ERP系统</li></ul></a></li>
-          <li><a><ul><li><Icon type="global" style={{fontSize: '32px'}} /></li><li>内网导航</li></ul></a></li>
-          <li><a><ul><li><Icon type="shopping-cart" style={{fontSize: '32px'}} /></li><li>采购系统</li></ul></a></li>
+          <li><a href="http://erpapp.tp-link.net"><ul><li><Icon type="hdd" style={{fontSize: '32px'}} /></li><li>ERP系统</li></ul></a></li>
+          <li><a href="http://erpapp.tp-link.net"><ul><li><Icon type="global" style={{fontSize: '32px'}} /></li><li>内网导航</li></ul></a></li>
+          <li><a href="http://poprod.tp-link.net:8000/OA_HTML/AppsLocalLogin.jsp"><ul><li><Icon type="shopping-cart" style={{fontSize: '32px'}} /></li><li>采购系统</li></ul></a></li>
 
 
         </ul>

@@ -6,6 +6,7 @@ import React from 'react';
 import {BrowserRouter,Route} from 'react-router-dom';
 import MainFrame from './default.js'
 import Navi from './navi'
+import Page from './pages/page-default-layout'
 
 export default class webLayout extends React.Component {
 
@@ -33,6 +34,7 @@ export default class webLayout extends React.Component {
         </Header>
         <Layout className="body">
           <Route exact path="/" component={MainFrame}></Route>
+          <Route path="/" component={Page}></Route>
         </Layout>
       </Layout>
 

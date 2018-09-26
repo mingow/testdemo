@@ -21,6 +21,7 @@ class App extends React.Component {
     //为首页跑马灯设置高度
     window.addEventListener('resize',this.handleWindowHeight);
     this.handleWindowHeight();
+    
   }
 
   componentWillUnmount(){
