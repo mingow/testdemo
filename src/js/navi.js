@@ -26,13 +26,17 @@ export default class Navi extends React.Component {
             <Icon type="code" />
             <span>OA管理</span>
           </Menu.Item>
+          <Menu.Item key="4">
+            <Icon type="book" />
+            <span className="ant-menu-item" style={{display:"inline-block",padding:'0'}}><a href="http://172.18.0.205:8090" target="_blank" >知识库</a></span>
+          </Menu.Item>
           <Menu.Item key="2">
             <Icon type="barcode" />
             <span className="ant-menu-item" style={{display:"inline-block",padding:'0'}}><Link to='/barcode'>条码查重</Link></span>
           </Menu.Item>
           <Menu.Item key="3">
             <Icon type="chrome" />
-            <span className="ant-menu-item" style={{display:"inline-block",padding:'0'}}><a href="./dist/files/browsers/chrome_installer.exe">浏览器升级</a></span>
+            <span className="ant-menu-item" style={{display:"inline-block",padding:'0'}}><a href="./dist/files/browsers/chrome_installer.exe" >浏览器升级</a></span>
           </Menu.Item>
         </Menu>
       </div>

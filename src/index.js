@@ -12,7 +12,7 @@ class App extends React.Component {
     var height = 768;
     var clientW = document.documentElement.clientWidth;
     var calcHeight = clientW/4*3;
-    height=height>document.documentElement.clientHeight-64?document.documentElement.clientHeight-64:height;
+    height=height>document.documentElement.clientHeight-64-69?document.documentElement.clientHeight-64-69:height;
     document.styleSheets[0].addRule('.carouselDefault', 'height:'+height+'px');
     document.styleSheets[0].addRule('.carouselDefault', 'width:'+(document.documentElement.clientWidth)+'px');
   }
@@ -21,7 +21,7 @@ class App extends React.Component {
     //为首页跑马灯设置高度
     window.addEventListener('resize',this.handleWindowHeight);
     this.handleWindowHeight();
-    
+
   }
 
   componentWillUnmount(){

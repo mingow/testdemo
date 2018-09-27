@@ -27,14 +27,19 @@ img {
   position:fixed;
   width: 100%;
   z-index: 100;
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(0,0,0,0.4);
 }
 
 .defaultHeader>ul{
   text-decoration: none;
   display: flex;
   margin:10px 0;
+  padding:0;
   justify-content: space-around;
+}
+
+.defaultHeader ul{
+  padding:0;
 }
 
 .defaultHeader ul li{
@@ -43,10 +48,43 @@ img {
   text-align: center;
 }
 
-.defaultHeader a {
-  color:#333;
+.defaultHeader a,.defaultHeader a:hover {
+  color:#eee;
+  text-decoration: none;
 }
 
 .carouselDefault {
   overflow: hidden;
+}
+
+.footer {
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.carousel .grid4  {
+  background-image: url('/dist/assets/images/hero-back-large-desktop.png');
+  background-repeat: no-repeat;
+  font-size: 16px;
+}
+
+.carousel .grid3  {
+  background-image: url('/dist/assets/images/hero-back-large-desktop.png');
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.chr-hero__image  {
+  width: 200px;
+}
+
+.carouselDiv {
+  padding-top:120px;
+}
+
+.carouselDiv .title {
+  font-weight: bold;
 }
