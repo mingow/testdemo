@@ -16,6 +16,12 @@ export default class Navi extends React.Component {
           type:"barcode",
           link:"/barcode",
           label:"条码查重"
+        },
+        {
+          key:2,
+          type:"audit",
+          link:"/order-requirement",
+          label:"特制单制作要求"
         }
       ],
       currentKey:0
@@ -23,13 +29,14 @@ export default class Navi extends React.Component {
   }
 
   componentWillMount(){
-    window.addEventListener('load',this.handleRoute);
-    window.addEventListener('hashchange',this.handleRoute);
+    window.addEventListener('load',this.handleRoute.bind(this));
+    window.addEventListener('hashchange',this.handleRoute.bind(this));
 
   }
 
   handleRoute(){
     var route = window.location.pathname.substring(1).split("/")[0];
+    
     if(route){
       var arr = this.state.items.filter((item)=>{
         if(item.link=="/"+route){return true;}
@@ -37,10 +44,10 @@ export default class Navi extends React.Component {
       });
 
       if(arr.length){
-        this.state.currentKey = arr[0].key;
+        console.log(arr[0].key);
+        this.setState({currentKey:arr[0].key});
       }
     }
-    console.log("handleRoute");
   }
 
   render(){
