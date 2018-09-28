@@ -17,14 +17,13 @@ export default class Navi extends React.Component {
     return (
       <div className="fullHeight">
         <Menu
-          defaultSelectedKeys={['1']}
           mode="horizontal"
           theme="dark"
           style={{ lineHeight: '64px' }}
         >
           <Menu.Item key="1">
             <Icon type="code" />
-            <span>OA管理</span>
+            <span className="ant-menu-item" style={{display:"inline-block",padding:'0'}}><a href="http://172.18.0.205/code/index.html" target="_blank" >OA管理</a></span>
           </Menu.Item>
           <Menu.Item key="4">
             <Icon type="book" />
