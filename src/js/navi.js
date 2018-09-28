@@ -9,34 +9,55 @@ export default class Navi extends React.Component {
   constructor(){
     super();
     this.state = {
-      collapsed: false
+      collapsed: false,
+      items:[
+        {
+          key:1,
+          type:"barcode",
+          link:"/barcode",
+          label:"条码查重"
+        }
+      ],
+      currentKey:0
     }
+  }
+
+  componentWillMount(){
+    window.addEventListener('load',this.handleRoute);
+    window.addEventListener('hashchange',this.handleRoute);
+
+  }
+
+  handleRoute(){
+    var route = window.location.pathname.substring(1).split("/")[0];
+    if(route){
+      var arr = this.state.items.filter((item)=>{
+        if(item.link=="/"+route){return true;}
+        return false;
+      });
+
+      if(arr.length){
+        this.state.currentKey = arr[0].key;
+      }
+    }
+    console.log("handleRoute");
   }
 
   render(){
     return (
       <div className="fullHeight">
         <Menu
+          selectedKeys={[this.state.currentKey.toString()]}
           mode="horizontal"
           theme="dark"
-          style={{ lineHeight: '64px' }}
+          style={{ lineHeight: '64px' }} onClick={this.handleRoute.bind(this)}
         >
-          <Menu.Item key="1">
-            <Icon type="code" />
-            <span className="ant-menu-item" style={{display:"inline-block",padding:'0'}}><a href="http://172.18.0.205/code/index.html" target="_blank" >OA管理</a></span>
-          </Menu.Item>
-          <Menu.Item key="4">
-            <Icon type="book" />
-            <span className="ant-menu-item" style={{display:"inline-block",padding:'0'}}><a href="http://172.18.0.205:8090" target="_blank" >知识库</a></span>
-          </Menu.Item>
-          <Menu.Item key="2">
-            <Icon type="barcode" />
-            <span className="ant-menu-item" style={{display:"inline-block",padding:'0'}}><Link to='/barcode'>条码查重</Link></span>
-          </Menu.Item>
-          <Menu.Item key="3">
-            <Icon type="chrome" />
-            <span className="ant-menu-item" style={{display:"inline-block",padding:'0'}}><a href="./dist/files/browsers/chrome_installer.exe" >浏览器升级</a></span>
-          </Menu.Item>
+          {this.state.items.map((item,i)=>(
+            <Menu.Item key={item.key}>
+              <Icon type={item.type} />
+              <span className="ant-menu-item" style={{display:"inline-block",padding:'0'}}><Link to={item.link}>{item.label}</Link></span>
+            </Menu.Item>
+          ))}
         </Menu>
       </div>
     )

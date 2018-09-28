@@ -25,6 +25,10 @@ export default class webLayout extends React.Component {
     });
   }
 
+  componentDidMount(){
+    console.log(this.props);
+  }
+
   render() {
     return (
       <Layout>

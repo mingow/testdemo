@@ -7,7 +7,30 @@ export default class MainFrame extends React.Component {
   constructor(){
     super();
     this.state = {
-      height:'500 px'
+      height:'500 px',
+      items:[
+        {
+          href:"http://erpapp.tp-link.net",
+          icon:"hdd",
+          title:"ERP系统"
+        },{
+          href:"http://tp-link.net",
+          icon:"global",
+          title:"内网导航"
+        },{
+          href:"http://poprod.tp-link.net:8000/OA_HTML/AppsLocalLogin.jsp",
+          icon:"shopping-cart",
+          title:"采购系统"
+        },{
+          href:"http://172.18.0.205/code/index.html",
+          icon:"code",
+          title:"OA管理"
+        },{
+          href:"http://172.18.0.205:8090",
+          icon:"book",
+          title:"知识库"
+        }
+      ]
     }
   }
 
@@ -24,9 +47,9 @@ export default class MainFrame extends React.Component {
       <Layout>
       <div className="defaultHeader" >
         <ul>
-          <li><a href="http://erpapp.tp-link.net" target="_blank"><ul><li><Icon type="hdd" style={{fontSize: '24px'}} /></li><li>ERP系统</li></ul></a></li>
-          <li><a href="http://tp-link.net" target="_blank"><ul><li><Icon type="global" style={{fontSize: '24px'}} /></li><li>内网导航</li></ul></a></li>
-          <li><a href="http://poprod.tp-link.net:8000/OA_HTML/AppsLocalLogin.jsp" target="_blank"><ul><li><Icon type="shopping-cart" style={{fontSize: '24px'}} /></li><li>采购系统</li></ul></a></li>
+          {this.state.items.map((item,i)=>(
+            <li key={i}><a href={item.href} target="_blank"><ul><li><Icon type={item.icon} style={{fontSize: '24px'}} /></li><li>{item.title}</li></ul></a></li>
+          ))}
         </ul>
       </div>
         <Carousel autoplay effect="fade" className="carouselDefault carousel">
