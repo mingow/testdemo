@@ -22,6 +22,12 @@ export default class Navi extends React.Component {
           type:"audit",
           link:"/order-requirement",
           label:"特制单制作要求"
+        },
+        {
+          key:3,
+          type:"calendar",
+          link:"/meeting-broadcast",
+          label:"会议通知"
         }
       ],
       currentKey:0
@@ -36,7 +42,7 @@ export default class Navi extends React.Component {
 
   handleRoute(){
     var route = window.location.pathname.substring(1).split("/")[0];
-    
+
     if(route){
       var arr = this.state.items.filter((item)=>{
         if(item.link=="/"+route){return true;}
