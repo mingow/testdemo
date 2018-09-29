@@ -30,8 +30,16 @@ img {
   background-color: #198fff;
 }
 
+.list {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 760px;
+}
+
 .list div {
-  padding:10px
+
 }
 
 .defaultHeader>ul{
