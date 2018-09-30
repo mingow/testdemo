@@ -82,18 +82,6 @@ export default class OrderRequirement extends React.Component {
 
     return (
       <Content style={{display:"flex",flexDirection: "column",alignItems:"center"}}>
-        <Content style={{display:"block",width:"100%",padding:"10px"}}>
-          <Breadcrumb>
-            <Breadcrumb.Item href="">
-              <Icon type="home" />
-            </Breadcrumb.Item>
-            <Breadcrumb.Item href="">
-              <Icon type="audit" />
-              <span>特制单制作要求</span>
-            </Breadcrumb.Item>
-          </Breadcrumb>
-        </Content>
-
         <Steps current={this.state.current}>
           {this.state.steps.map((item,i)=>(
             <Step key={i} title={item.title} icon={<Icon type={item.icon} />}  />

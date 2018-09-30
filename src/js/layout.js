@@ -25,10 +25,6 @@ export default class webLayout extends React.Component {
     });
   }
 
-  componentDidMount(){
-    console.log(this.props);
-  }
-
   render() {
     return (
       <Layout>
@@ -38,7 +34,7 @@ export default class webLayout extends React.Component {
         </Header>
         <Layout className="body" style={{marginTop:"64px"}}>
           <Route exact path="/" component={MainFrame}></Route>
-          <Route path="/:page" component={Page}></Route>
+          <Route path="/:params" component={Page}></Route>
         </Layout>
         <Footer className="footer">
           <span>美科星科技有限公司|制造处 版权所有 © 2018</span>
