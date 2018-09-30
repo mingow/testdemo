@@ -29,6 +29,10 @@ export default class MainFrame extends React.Component {
           href:"http://172.18.0.205:8090",
           icon:"book",
           title:"知识库"
+        },{
+          href:"/codeGuide.html",
+          icon:"book",
+          title:"代码规范"
         }
       ]
     }

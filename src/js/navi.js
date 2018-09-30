@@ -74,7 +74,7 @@ export default class Navi extends React.Component {
           {this.state.items.map((item,i)=>(
               <Menu.Item key={item.key}>
                 <Icon type={item.state.type} />
-                <span className="ant-menu-item" style={{display:"inline-block",padding:'0'}}><Link to={item}>{item.state.label}</Link></span>
+                <span className={this.state.currentKey==i+1?"ant-menu-item menu-span":"ant-menu-item"} style={{display:"inline-block",padding:'0'}}><Link to={item}>{item.state.label}</Link></span>
               </Menu.Item>
             ))}
         </Menu>
