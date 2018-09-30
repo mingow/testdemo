@@ -3,6 +3,7 @@ import {Layout} from 'antd';
 const {Content} = Layout;
 import Barcode from './barcode';
 import OrderRequirement from './order-requirement';
+import MeetingBroadcast from './meeting-broadcast';
 import {BrowserRouter,Route} from 'react-router-dom';
 
 export default class Pages extends React.Component {
@@ -13,6 +14,7 @@ export default class Pages extends React.Component {
         <Content  style={{ background: '#fff', padding: 24, margin: 0, minHeight: 280 }}>
           <Route exact path="/barcode" component={Barcode}></Route>
           <Route exact path="/order-requirement" component={OrderRequirement}></Route>
+          <Route exact path="/meeting-broadcast" component={MeetingBroadcast}></Route>
         </Content>
       </Layout>
     )
