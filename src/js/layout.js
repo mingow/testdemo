@@ -3,10 +3,11 @@ const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 const {Header, Content, Sider, Footer} = Layout;
 import React from 'react';
-import {BrowserRouter,Route} from 'react-router-dom';
+import {BrowserRouter,Route,IndexRoute} from 'react-router-dom';
 import MainFrame from './default.js'
 import Navi from './navi'
 import Page from './pages/page-default-layout'
+import Login from './pages/login'
 
 export default class webLayout extends React.Component {
 
@@ -33,7 +34,9 @@ export default class webLayout extends React.Component {
           <Navi />
         </Header>
         <Layout className="body" style={{marginTop:"64px"}}>
+
           <Route exact path="/" component={MainFrame}></Route>
+          <Route exact path="/login/p" component={Login}></Route>
           <Route path="/:params" component={Page}></Route>
         </Layout>
         <Footer className="footer">

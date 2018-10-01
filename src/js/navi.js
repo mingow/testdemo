@@ -1,8 +1,11 @@
 import React from 'react'
-import { Menu, Icon, Button } from 'antd';
+import { Menu, Icon, Button , Form, Input} from 'antd';
 import {Link} from 'react-router-dom';
 
 const SubMenu = Menu.SubMenu;
+const FormItem = Form.Item;
+
+
 
 export default class Navi extends React.Component {
 
@@ -72,14 +75,15 @@ export default class Navi extends React.Component {
           style={{ lineHeight: '64px' }} onClick={this.handleRoute.bind(this)}
         >
           {this.state.items.map((item,i)=>(
-              <Menu.Item key={item.key}>
-                <Icon type={item.state.type} />
-                <span className={this.state.currentKey==i+1?"ant-menu-item menu-span":"ant-menu-item"} style={{display:"inline-block",padding:'0'}}><Link to={item}>{item.state.label}</Link></span>
-              </Menu.Item>
-            ))}
+            <Menu.Item key={item.key}>
+              <Icon type={item.state.type} />
+              <span className={this.state.currentKey==i+1?"ant-menu-item menu-span":"ant-menu-item"} style={{display:"inline-block",padding:'0'}}><Link to={item}>{item.state.label}</Link></span>
+            </Menu.Item>
+          ))}
+          <Menu.Item key={0} style={{float:"right"}}>username</Menu.Item>
+
         </Menu>
       </div>
     )
   }
-
 }

@@ -4,6 +4,7 @@ import Layout from './js/layout.js';
 import {BrowserRouter,Route} from 'react-router-dom';
 import {LocaleProvider} from 'antd';
 import zh_CN from 'antd/lib/locale-provider/zh_CN'
+import {getAuthorization} from './js/util/base';
 
 
 class App extends React.Component {
@@ -21,6 +22,7 @@ class App extends React.Component {
     //为首页跑马灯设置高度
     window.addEventListener('resize',this.handleWindowHeight);
     this.handleWindowHeight();
+    console.log(getAuthorization());
 
   }
 
