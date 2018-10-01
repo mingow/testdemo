@@ -115,15 +115,15 @@ export default class Barcode extends React.Component {
               </Card>
             </Row>
             <Row type="flex" justify="center" align="top" style={{padding: '0 24px 24px'}}>
-              <Spin spinning={this.state.status=='waiting'?true:false}>
+
                 <Alert
                   message="扫描结果"
                   description={this.state.val+'|'+this.state.alertData[this.state.alertIndex].msg}
                   type={this.state.alertData[this.state.alertIndex].type}
-                  style={{ width: 600}}
+                  style={{ width: "100%"}}
                   className='alert'
                 />
-              </Spin>
+              
             </Row>
           </Col>
           <Col span={12}>
