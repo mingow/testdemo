@@ -2,8 +2,8 @@ import React from 'react';
 import {Layout,Breadcrumb,Icon} from 'antd';
 const {Content} = Layout;
 import Barcode from './barcode';
-import OrderRequirement from './order-requirement';
-import MeetingBroadcast from './meeting-broadcast';
+import OrderRequirement from './order_requirement';
+import MeetingBroadcast from './meeting_broadcast';
 import {BrowserRouter,Route} from 'react-router-dom';
 
 export default class Pages extends React.Component {
@@ -28,9 +28,9 @@ export default class Pages extends React.Component {
               </Breadcrumb.Item>
             </Breadcrumb>
           </div>
-          <Route exact path="/barcode" component={Barcode}></Route>
-          <Route exact path="/order-requirement" component={OrderRequirement}></Route>
-          <Route exact path="/meeting-broadcast" component={MeetingBroadcast}></Route>
+          <Route exact path="/p/barcode" component={Barcode}></Route>
+          <Route exact path="/p/order-requirement" component={OrderRequirement}></Route>
+          <Route exact path="/p/meeting-broadcast" component={MeetingBroadcast}></Route>
         </Content>
       </Layout>
     )

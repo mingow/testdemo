@@ -16,7 +16,7 @@ export default class Navi extends React.Component {
       items:[
         {
           key:1,
-          pathname:"/barcode",
+          pathname:"/p/barcode",
           state:{
             type:"barcode",
             label:"条码查重",
@@ -24,7 +24,7 @@ export default class Navi extends React.Component {
         },
         {
           key:2,
-          pathname:"/order-requirement",
+          pathname:"/p/order-requirement",
           state:{
             type:"audit",
             label:"特制单制作要求",
@@ -32,7 +32,7 @@ export default class Navi extends React.Component {
         },
         {
           key:3,
-          pathname:"/meeting-broadcast",
+          pathname:"/p/meeting-broadcast",
           state:{
             type:"calendar",
             label:"会议通知",
@@ -50,11 +50,11 @@ export default class Navi extends React.Component {
   }
 
   handleRoute(){
-    var route = window.location.pathname.substring(1).split("/")[0];
+    var route = window.location.pathname;
 
     if(route){
       var arr = this.state.items.filter((item)=>{
-        if(item.pathname=="/"+route){return true;}
+        if(item.pathname==route){return true;}
         return false;
       });
 

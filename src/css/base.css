@@ -8,6 +8,30 @@ body {
   height:100%
 }
 
+.login-bg{
+  /* background-color: #6fb6fa; */
+  background-image:url('/dist/assets/images/hero-back-large-desktop.png');
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  max-width: 300px;
+}
+.login-form .title {
+  display: block;
+  padding:0 0 10px;
+  font-size: 20px;
+}
+.login-form-forgot {
+  float: right;
+}
+.login-form-button {
+  width: 100%;
+}
+
 .ant-carousel .slick-slide {
   overflow: hidden;
   margin:0 auto;
